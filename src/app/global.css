@@ -82,3 +82,14 @@ body,
   min-height: 100svh;
   width: 100%;
 }
+
+button>svg {
+  height: 22px;
+  width: 22px;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover>svg {
+  fill: hsl(var(--primary));
+  transition: all 200ms ease-in-out;
+}

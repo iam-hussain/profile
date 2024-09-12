@@ -53,12 +53,14 @@ const App = () => {
             <h1 className="text-5xl text-black">Jakir <span className="font-extrabold">Hussain</span></h1>
           </div> */}
           <div className="flex items-start justify-center w-full h-full gap-5 align-middle md:max-h-[800px] flex-col md:flex-row">
-            <div className="flex flex-col h-full gap-6">
-              <Button variant={'outline'}><LuSun /></Button>
-              <div className="flex flex-col gap-4 p-2 py-4 bg-white rounded-md">
-                <Button variant={'outline'}><LuSun /></Button>
-                <Button variant={'outline'}><LuSun /></Button>
-                <Button variant={'outline'}><LuSun /></Button></div>
+            <div className="flex flex-col h-full gap-4">
+              <div className="flex flex-col gap-4 p-2 bg-white rounded-full">
+                <Button variant={'icon'}><LuSun /></Button>
+              </div>
+              <div className="flex flex-col gap-3 p-2 py-3 bg-white rounded-full">
+                <Button variant={'icon'}><LuSun /></Button>
+                <Button variant={'icon'}><LuSun /></Button>
+                <Button variant={'icon'}><LuSun /></Button></div>
 
             </div>
             <div className="h-[620px] w-[360px] bg-white rounded-3xl rounded-tr-none p-10 flex flex-col justify-between align-middle items-center gap-6">
@@ -67,7 +69,7 @@ const App = () => {
                 <p className="text-lg font-bold text-lime-800">Software Engineer</p>
                 <h1 className="text-3xl text-black">Jakir <span className="font-extrabold">Hussain</span></h1>
               </div>
-              <div className="flex items-stretch justify-between gap-4">
+              <div className="flex items-stretch justify-between gap-2">
                 <Button ><LuSun /></Button>
                 <Button ><LuSun /></Button>
                 <Button ><LuSun /></Button>
@@ -78,11 +80,10 @@ const App = () => {
               <div className="flex flex-col w-full gap-4">
                 <Separator />
 
-                <div className="flex w-full gap-4">
-                  <Button variant={'outline'} >Download CV <LuSun /></Button>
+                <div className="flex justify-between w-full gap-2">
+                  <Button variant={'ghost'} className="w-full">Download CV</Button>
                   <Separator orientation="vertical" />
-
-                  <Button variant={'outline'}>Contact me <LuSun /></Button>
+                  <Button variant={'ghost'} className="w-full">Contact me</Button>
                 </div>
               </div>
 
