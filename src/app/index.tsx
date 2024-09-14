@@ -1,17 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container,
-  type ISourceOptions,
-} from "@tsparticles/engine";
+// import {
+//   type Container,
+//   type ISourceOptions,
+// } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
-import particlesOptions from './particles-options'
+// import particlesOptions from './particles-options'
 import { Button } from "@/components/ui/button";
 import { LuSun } from "react-icons/lu";
 import { Separator } from "@/components/ui/separator";
+import Service from "./service";
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -31,26 +32,26 @@ const App = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  // const particlesLoaded = async (container?: Container): Promise<void> => {
+  //   console.log(container);
+  // };
 
-  const options = useMemo(
-    () => (particlesOptions),
-    [],
-  );
+  // const options = useMemo(
+  //   () => (particlesOptions),
+  //   [],
+  // );
 
   if (init) {
     return (
       <>
-        <Particles
+        {/* <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={options as unknown as ISourceOptions}
-        />
-        <div className="flex flex-col items-center justify-center w-full h-full gap-5 align-middle">
+        /> */}
+        <div className="flex flex-col items-center justify-center w-full h-full gap-5 align-middle bg-slate-900">
 
-          <div className="flex flex-col items-center justify-center w-full h-auto gap-5 px-4 py-12 align-middle lg:items-start lg:flex-row">
+          <div className="flex flex-col items-center justify-center w-full h-full gap-5 px-4 py-12 align-middle lg:items-start lg:flex-row">
             <div className="flex flex-col-reverse items-center justify-center gap-5 lg:flex-row">
               <div className="flex h-full gap-4 lg:flex-col">
                 <div className="flex flex-col gap-4 p-3 bg-white rounded-full">
@@ -111,6 +112,7 @@ const App = () => {
             </div>
           </div>
         </div>
+        <Service />
 
       </>
     );
