@@ -125,3 +125,7 @@ text:active {
   fill: hsl(var(--primary));
   transition: all ease-in-out 200ms;
 }
+
+/* * {
+  background-color: rgba(0, 0, 255, 0.1);
+} */

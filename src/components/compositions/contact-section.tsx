@@ -3,37 +3,39 @@ import { Phone, Mail, MapPin, Send } from "lucide-react"
 
 export default function ContactSection() {
     return (
-        <div className="w-full p-8 mx-auto">
-            <div className="flex items-center gap-2 mb-4">
-                <Send className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium text-gray-500 uppercase">Contact</span>
+        <div className="flex flex-col gap-12 px-6 pb-20">
+            <div className="flex flex-col items-start w-auto gap-4">
+                <div className='flex items-center justify-center w-auto gap-2 px-2 py-1 align-middle border rounded-md'>
+                    <Send />
+                    <span className="text-sm font-medium uppercase text-foreground/60">Contact</span>
+                </div>
+                <h2 className="text-3xl font-bold">Let's Get in Touch!</h2>
             </div>
-            <h2 className="mb-8 text-3xl font-bold">Let's Get in Touch!</h2>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <Card className="shadow-md">
-                    <CardContent className="flex items-center p-4">
-                        <Phone className="w-8 h-8 mr-4 text-primary" />
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <Card className="p-2 rounded-md">
+                    <CardContent className="flex items-center gap-6 p-4">
+                        <Phone className="w-8 h-8 text-foreground" />
                         <div>
-                            <p className="text-sm text-gray-500">Phone</p>
-                            <p className="font-medium">+1 840 841 25 69</p>
+                            <p className="text-sm text-foreground/90">Phone</p>
+                            <p className="font-medium">+91 9629 180060</p>
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-md">
-                    <CardContent className="flex items-center p-4">
-                        <Mail className="w-8 h-8 mr-4 text-primary" />
+                <Card className="p-2 rounded-md">
+                    <CardContent className="flex items-center gap-6 p-4">
+                        <Mail className="w-8 h-8 text-foreground" />
                         <div>
-                            <p className="text-sm text-gray-500">Email</p>
-                            <p className="font-medium uppercase">andrew@website.com</p>
+                            <p className="text-sm text-foreground/90">Email</p>
+                            <p className="font-medium uppercase">itsjakirhussain@gmail.com</p>
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-md md:col-span-2">
-                    <CardContent className="flex items-center p-4">
-                        <MapPin className="w-8 h-8 mr-4 text-primary" />
+                <Card className="p-2 rounded-md md:col-span-2">
+                    <CardContent className="flex items-center gap-6 p-4">
+                        <MapPin className="w-8 h-8 text-foreground" />
                         <div>
-                            <p className="text-sm text-gray-500">Address</p>
-                            <p className="font-medium">Los Angeles, California, USA</p>
+                            <p className="text-sm text-foreground/90">Address</p>
+                            <p className="font-medium">Bangalore, Karnataka, India</p>
                         </div>
                     </CardContent>
                 </Card>

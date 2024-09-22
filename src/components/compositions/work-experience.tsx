@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { BicepsFlexed } from 'lucide-react';
+
 
 const workExperience = [
     {
@@ -40,29 +42,33 @@ const workExperience = [
 
 export default function WorkExperience() {
     return (
-        <div className="container p-4 mx-auto md:p-8">
-            <h2 className="mb-8 text-3xl font-bold text-center">Work Experience</h2>
-            <div className="relative">
+        <div className="flex flex-col gap-12">
+            <div className="flex flex-col items-start w-auto gap-4">
+                <div className='flex items-center justify-center w-auto gap-2 px-2 py-1 align-middle border rounded-md'>
+                    <BicepsFlexed />
+                    <span className="text-sm font-medium uppercase text-foreground/60">Resume</span>
+                </div>
+                <h2 className="text-3xl font-bold">Work Experience</h2>
+            </div>
+            <div className="relative flex flex-col gap-6">
                 {workExperience.map((experience, index) => (
-                    <div key={index} className="flex items-center justify-between w-full mb-8 right-timeline">
+                    <div key={index} className="flex items-center justify-between w-full gap-6">
+                        <div className="z-20 flex items-center order-1 w-6 h-6 rounded-full shadow-xl bg-foreground">
 
-                        {/* <div className="order-1 w-5/12"></div> */}
-                        <div className="z-20 flex items-center order-1 w-8 h-8 rounded-full shadow-xl bg-primary">
-                            <h1 className="mx-auto text-lg font-semibold text-primary-foreground">{index + 1}</h1>
                         </div>
-                        <Card className={`order-1 w-11/12`}>
-                            <CardHeader>
+                        <Card className={`order-1 w-full p-2 rounded-md`}>
+                            <CardHeader className="pb-4">
                                 <CardTitle>{experience.title}</CardTitle>
                                 <p className="text-sm text-muted-foreground">{experience.yearRange}</p>
                                 <p className="text-sm font-medium">{experience.location}</p>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm leading-snug tracking-wide text-muted-foreground">{experience.description}</p>
+                                <p className="text-sm leading-snug tracking-wide text-foreground/80">{experience.description}</p>
                             </CardContent>
                         </Card>
                     </div>
                 ))}
-                <div className="absolute hidden md:flex inset-y-0 w-1 transform -translate-x-1/2 left-[15px] bg-primary-foreground"></div>
+                <div className="absolute hidden md:flex inset-y-0 w-1 transform -translate-x-1/2 left-[12px] bg-foreground/20"></div>
             </div>
         </div>
     )
