@@ -52,6 +52,10 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

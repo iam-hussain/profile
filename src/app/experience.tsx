@@ -8,12 +8,12 @@ const WorkTimelineItem = ({ yearRange, title, location, description }: any) => {
       {/* Timeline Dot */}
       <div className="flex flex-col items-center">
         <div className="w-4 h-4 bg-pink-500 rounded-full"></div>
-        <div className="h-full w-px bg-gray-300 mt-2"></div>
+        <div className="w-px h-full mt-2 bg-gray-300"></div>
       </div>
 
       {/* Content */}
       <div className="ml-4">
-        <p className="text-pink-600 font-bold">{yearRange}</p>
+        <p className="font-bold text-pink-600">{yearRange}</p>
         <h3 className="text-xl font-semibold">{title}</h3>
         <p className="text-gray-500">{location}</p>
         <p className="mt-2 text-gray-700">{description}</p>
@@ -47,19 +47,41 @@ const Experience = () => {
   const workExperience = [
     {
       yearRange: '2023 - Present',
-      title: 'Full-Stack Developer',
-      location: 'Bangalore, Conde Nast Technology Lab',
+      title: 'Software Engineer II',
+      location: 'Conde Nast Technology Lab, Bangalore',
       description:
-        'Developing scalable web applications using React, Next.js, Node.js, and AWS. Leading projects like personalization engines and content management systems, collaborating with cross-functional teams.',
+        'Led projects such as the TNY Caption Contest and Personalization Content for Users. Developed scalable web applications using React, Next.js, Node.js, and AWS. Provided technical leadership and mentored junior developers, while ensuring performance optimization and scalability.',
+    },
+    {
+      yearRange: '2021 - 2023',
+      title: 'Software Engineer I',
+      location: 'Conde Nast Technology Lab, Bangalore',
+      description:
+        'Developed and maintained complex web applications, including Smart Component and TNY Name Drop Quizzes. Focused on enhancing user engagement and implementing API-driven solutions. Worked with React, GraphQL, and AWS to deliver personalized content and manage subscriptions efficiently.',
     },
     {
       yearRange: '2021 - 2023',
       title: 'Software Engineer',
-      location: 'Chennai, HTC Global Services',
+      location: 'HTC Global Services, Chennai',
       description:
         'Developed microservices and APIs using Node.js and Express, designed and maintained databases with MongoDB and MySQL. Managed cloud deployments on AWS and ensured serverless architecture.',
     },
-  ];
+    {
+      yearRange: '2018 - 2020',
+      title: 'Node JS Developer',
+      location: 'Develop Script LLC, Chennai',
+      description:
+        'Developed auction-based e-commerce websites and mobile application APIs using Node.js and Express. Integrated third-party libraries for payment gateways, shipping services, and notifications. Managed real-time data binding with Socket.IO.',
+    },
+    {
+      yearRange: '2017 - 2018',
+      title: 'Software Trainee',
+      location: 'Selsun Technologies, Chennai',
+      description:
+        'Worked on enhancing OpenCV image processing algorithms for semi-device equipment. Collaborated with teams to develop various projects within limited timeframes to meet customer requirements.',
+    },
+  ]
+
 
   const certifications = [
     {
@@ -102,7 +124,7 @@ const Experience = () => {
   return (
     <div className="p-8">
       {/* Work Experience Section */}
-      <h1 className="text-3xl font-bold text-center mb-8">Work Experience & Education</h1>
+      <h1 className="mb-8 text-3xl font-bold text-center">Work Experience & Education</h1>
       <div className="flex justify-center mb-12">
         <div className="max-w-2xl">
           {workExperience.map((work, index) => (
@@ -120,22 +142,22 @@ const Experience = () => {
       <Separator className="my-8" />
 
       {/* Certifications Section */}
-      <h2 className="text-3xl font-bold text-center mb-8">Certifications</h2>
+      <h2 className="mb-8 text-3xl font-bold text-center">Certifications</h2>
       <div className="flex flex-wrap justify-center">
         {certifications.map((cert, index) => (
           <InfoCard
-                key={index}
-                year={cert.year}
-                title={cert.title}
-                description={cert.description}
-                linkText={cert.linkText} location={undefined}          />
+            key={index}
+            year={cert.year}
+            title={cert.title}
+            description={cert.description}
+            linkText={cert.linkText} location={undefined} />
         ))}
       </div>
 
       <Separator className="my-8" />
 
       {/* Education Section */}
-      <h2 className="text-3xl font-bold text-center mt-16 mb-8">Education</h2>
+      <h2 className="mt-16 mb-8 text-3xl font-bold text-center">Education</h2>
       <div className="flex flex-wrap justify-center">
         {education.map((edu, index) => (
           <InfoCard

@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/Poppins-Regular.ttf");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -107,4 +112,16 @@ body,
 button>svg {
   height: 22px;
   width: 22px;
+}
+
+text {
+  cursor: pointer;
+  user-select: none;
+}
+
+text:hover,
+text:active {
+  rotate: none;
+  fill: hsl(var(--primary));
+  transition: all ease-in-out 200ms;
 }
