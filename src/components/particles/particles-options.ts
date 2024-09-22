@@ -1,9 +1,6 @@
 const options = {
   autoPlay: true,
   background: {
-    color: {
-      value: "#dde3da",
-    },
     image: "",
     position: "",
     repeat: "",
