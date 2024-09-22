@@ -18,7 +18,7 @@ import { Mouse } from 'lucide-react';
 const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <ScrollArea className="flex-1 max-w-6xl rounded-tr-3xl rounded-b-3xl" ref={ref}>
-      <div className="flex flex-col w-full max-w-6xl gap-12 rounded-tl-none md:p-6 2xl:p-12 bg-background rounded-3xl" id="base-scroll">
+      <div className="flex flex-col w-full max-w-6xl gap-4 rounded-tl-none lg:gap-12 xl:p-8 md:p-6 2xl:p-12 bg-background rounded-3xl" id="base-scroll">
         <AboutMe />
         <Separator />
         <Service />
