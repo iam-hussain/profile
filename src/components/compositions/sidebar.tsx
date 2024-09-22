@@ -12,8 +12,12 @@ import {
     Linkedin,
     Twitter
 } from 'lucide-react';
+import { CustomAnchor } from "../ui/anchor";
+import { links } from "@/configs";
 
-const SideBar = () => {
+const SideBar = ({ handleScrollToId }: {
+    handleScrollToId: (id: string) => void
+}) => {
     return (
         <div className="flex items-start justify-center align-middle">
             <div className="flex flex-col-reverse items-center justify-center h-auto gap-5 lg:flex-row ">
@@ -22,11 +26,11 @@ const SideBar = () => {
                         <Button variant={'icon'}><Sun /></Button>
                     </div>
                     <div className="flex gap-3 p-3 rounded-full bg-background lg:py-5 lg:flex-col">
-                        <Button variant={'icon'}><UserPen /></Button>
-                        <Button variant={'icon'}><Handshake /></Button>
-                        <Button variant={'icon'}><GitPullRequest /></Button>
-                        <Button variant={'icon'}><BriefcaseBusiness /></Button>
-                        <Button variant={'icon'}><SendHorizontal /></Button>
+                        <Button variant={'icon'} onClick={() => handleScrollToId('about')}><UserPen /></Button>
+                        <Button variant={'icon'} onClick={() => handleScrollToId('service')}><Handshake /></Button>
+                        <Button variant={'icon'} onClick={() => handleScrollToId('skill')}><GitPullRequest /></Button>
+                        <Button variant={'icon'} onClick={() => handleScrollToId('experience')}><BriefcaseBusiness /></Button>
+                        <Button variant={'icon'} onClick={() => handleScrollToId('contact')}><SendHorizontal /></Button>
 
                     </div>
 
@@ -38,16 +42,48 @@ const SideBar = () => {
                         <h1 className="text-4xl text-foreground">Jakir <span className="font-extrabold">Hussain</span></h1>
                     </div>
                     <div className="flex items-stretch justify-between gap-2">
-                        <Button variant={'outline'} ><Github className="stroke-foreground fill-foreground" /></Button>
-                        <Button variant={'outline'}><Linkedin className="stroke-foreground fill-foreground" /></Button>
-                        <Button variant={'outline'}><Twitter className="stroke-foreground fill-foreground" /></Button>
+                        <CustomAnchor
+                            variant={'outline'}
+                            href={links.github}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="Jakir Hussain GitHub">
+                            <Github className="stroke-foreground fill-foreground" />
+                        </CustomAnchor>
+                        <CustomAnchor
+                            variant={'outline'}
+                            href={links.linkedin}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="Jakir Hussain LinkedIn Profile">
+                            <Linkedin className="stroke-foreground fill-foreground" />
+                        </CustomAnchor>
+
+                        <CustomAnchor
+                            variant={'outline'}
+                            href={links.twitter}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="Jakir Hussain Twitter / X.com">
+                            <Twitter className="stroke-foreground fill-foreground" />
+                        </CustomAnchor>
+
                     </div>
 
                     <div className="flex flex-col w-full gap-4">
                         <Separator />
 
                         <div className="flex justify-between w-full gap-2">
-                            <Button variant={'ghost'} className="w-full">Download CV</Button>
+                            <CustomAnchor
+                                variant={'ghost'}
+                                href={links.cv}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                aria-label="Jakir Hussain Resume ? CV">
+                                Download CV
+                            </CustomAnchor>
+
+
                             <Separator orientation="vertical" />
                             <Button variant={'ghost'} className="w-full">Contact me</Button>
                         </div>
@@ -60,3 +96,4 @@ const SideBar = () => {
 }
 
 export default SideBar
+

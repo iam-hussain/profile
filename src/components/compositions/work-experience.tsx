@@ -42,7 +42,7 @@ const workExperience = [
 
 export default function WorkExperience() {
     return (
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12" id="experience">
             <div className="flex flex-col items-start w-auto gap-4">
                 <div className='flex items-center justify-center w-auto gap-2 px-2 py-1 align-middle border rounded-md'>
                     <BicepsFlexed />

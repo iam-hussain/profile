@@ -3,7 +3,7 @@ import ScoreCard from "@/components/patterns/score-card";
 
 const AboutMe = () => {
     return (
-        <div className="flex flex-col w-auto h-auto gap-6 px-6">
+        <div className="flex flex-col w-auto h-auto gap-6 px-6" id="about">
             <p className="text-2xl font-medium">Hello, I'm <span className="text-primary">Jakir Hussain</span></p>
             <h3 className="text-3xl font-medium lg:text-6xl">Software Engineer and <span className="text-primary">Full-Stack</span> Developer
                 Based in India.</h3>
