@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Send } from "lucide-react"
 
-export default function ContactSection() {
+export default function Contact() {
     return (
         <div className="flex flex-col gap-12 px-6 py-12 pb-20" id="contact">
             <div className="flex flex-col items-start w-auto gap-4">

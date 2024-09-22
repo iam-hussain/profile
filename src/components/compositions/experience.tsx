@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BicepsFlexed } from 'lucide-react';
 
 
-const workExperience = [
+const experienceList = [
     {
         yearRange: '2023 - Present',
         title: 'Software Engineer II',
@@ -40,7 +40,7 @@ const workExperience = [
     },
 ]
 
-export default function WorkExperience() {
+export default function Experience() {
     return (
         <div className="flex flex-col gap-12 px-6 py-12" id="experience">
             <div className="flex flex-col items-start w-auto gap-4">
@@ -51,7 +51,7 @@ export default function WorkExperience() {
                 <h2 className="text-3xl font-bold">Work Experience</h2>
             </div>
             <div className="relative flex flex-col gap-6">
-                {workExperience.map((experience, index) => (
+                {experienceList.map((experience, index) => (
                     <div key={index} className="flex items-center justify-between w-full gap-6">
                         <div className="z-20 flex items-center order-1 w-6 h-6 rounded-full shadow-xl bg-foreground">
 

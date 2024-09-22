@@ -2,9 +2,9 @@
 import { forwardRef, useRef } from 'react';
 import { Separator } from "@/components/ui/separator";
 import Service from "@/components/compositions/service";
-import WorkExperience from "@/components/compositions/work-experience";
+import Experience from "@/components/compositions/experience";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import ContactSection from "@/components/compositions/contact-section";
+import Contact from "@/components/compositions/contact";
 import SideBar from "@/components/compositions/sidebar";
 import AboutMe from "@/components/compositions/about-me";
 import Skills from "@/components/compositions/skills";
@@ -22,9 +22,9 @@ const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         <Separator />
         <Skills />
         <Separator />
-        <WorkExperience />
+        <Experience />
         <Separator />
-        <ContactSection />
+        <Contact />
       </div>
     </ScrollArea>
   );
@@ -53,7 +53,7 @@ const App = () => {
         enableSystem
         disableTransitionOnChange>
         {/* <ParticlesBG /> */}
-        <div className="flex items-center justify-center min-h-screen m-auto align-middle">
+        <div className="flex items-center justify-center min-h-screen m-auto align-middle select-none">
           <div className="flex h-screen gap-6 px-6 py-6">
             <SideBar handleScrollToId={handleScrollToId} />
             <ScrollComponent ref={scrollRef} />

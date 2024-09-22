@@ -25,7 +25,7 @@ const SideBar = ({ handleScrollToId }: {
                     <div className="flex flex-col gap-4 p-3 rounded-full bg-background">
                         <ThemeModeToggle />
                     </div>
-                    <div className="flex gap-3 p-3 rounded-full bg-background lg:py-5 lg:flex-col">
+                    <div className="flex gap-3 p-3 rounded-full bg-background lg:flex-col">
                         <Button variant={'icon'} onClick={() => handleScrollToId('about')}><UserPen /></Button>
                         <Button variant={'icon'} onClick={() => handleScrollToId('service')}><Handshake /></Button>
                         <Button variant={'icon'} onClick={() => handleScrollToId('skill')}><GitPullRequest /></Button>
