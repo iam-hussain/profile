@@ -34,7 +34,7 @@ const SideBar = ({ handleScrollToId }: {
                         {/* <Button variant={'icon'} onClick={() => handleScrollToId('contact')}><SendHorizontal /></Button> */}
 
                     </div>
-                    <Separator className="2xl:hidden bg-foreground/50" />
+                    <Separator className="2xl:hidden bg-foreground/20" />
 
                 </div>
                 <div className="2xl:w-[360px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none p-10 flex flex-col justify-between align-middle items-center gap-6">
