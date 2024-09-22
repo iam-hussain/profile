@@ -2,9 +2,9 @@
 
 const SkillsWordCloud = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0" y="0" width="1024" height="1024" viewBox="0 0 1024 1024" xmlSpace="preserve">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0" y="0" className="w-full h-full" viewBox="0 0 1024 1024" xmlSpace="preserve">
             <desc>Created @ WordClouds.com</desc>
-            <rect x="0" y="0" width="1024" height="1024" className="fill-foreground" opacity="0" />
+            <rect x="0" y="0" className="w-full h-full fill-foreground" opacity="0" />
             <text transform="rotate(10799.999999999998, 611, 816)" font-weight="400" className="fill-foreground/85" opacity="1" x="611" y="839.5" font-family="Poppins" font-size="94.14122768005633px" text-anchor="middle">Javascript</text>
             <text transform="rotate(14759.999999999998, 711, 330)" font-weight="400" className="fill-foreground/75" opacity="1" x="711" y="351" font-family="Poppins" font-size="94.14122768005633px" text-anchor="middle">Express JS</text>
             <text transform="rotate(16920, 752, 525)" font-weight="400" className="fill-foreground/75" opacity="1" x="752" y="548.5" font-family="Poppins" font-size="94.14122768005633px" text-anchor="middle">Typescript</text>

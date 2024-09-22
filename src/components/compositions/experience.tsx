@@ -53,7 +53,7 @@ export default function Experience() {
             <div className="relative flex flex-col gap-6">
                 {experienceList.map((experience, index) => (
                     <div key={index} className="flex items-center justify-between w-full gap-6">
-                        <div className="z-20 flex items-center order-1 w-6 h-6 rounded-full shadow-xl bg-foreground">
+                        <div className="z-20 items-center order-1 hidden w-6 h-6 rounded-full shadow-xl md:flex bg-foreground">
 
                         </div>
                         <Card className={`order-1 w-full p-2 rounded-md`}>
