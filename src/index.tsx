@@ -8,13 +8,14 @@ import ContactSection from "@/components/compositions/contact-section";
 import SideBar from "@/components/compositions/sidebar";
 import AboutMe from "@/components/compositions/about-me";
 import Skills from "@/components/compositions/skills";
+import { ThemeProvider } from 'next-themes';
 // import ParticlesBG from "@/components/particles/particles-bg";
 
 
 const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <ScrollArea className="flex-1 max-w-6xl rounded-tr-3xl rounded-b-3xl" ref={ref}>
-      <div className="flex flex-col w-full max-w-6xl gap-24 p-12 py-20 rounded-tl-none bg-background rounded-3xl">
+      <div className="flex flex-col w-full max-w-6xl gap-12 p-12 py-12 rounded-tl-none bg-background rounded-3xl">
         <AboutMe />
         <Separator />
         <Service />
@@ -30,6 +31,7 @@ const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
 });
 
 const App = () => {
+
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const handleScrollToId = (id: string) => {
@@ -42,15 +44,22 @@ const App = () => {
     }
   };
 
+
   return (
     <>
-      {/* <ParticlesBG /> */}
-      <div className="flex items-center justify-center min-h-screen m-auto align-middle">
-        <div className="flex h-screen gap-6 px-6 py-12">
-          <SideBar handleScrollToId={handleScrollToId} />
-          <ScrollComponent ref={scrollRef} />
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange>
+        {/* <ParticlesBG /> */}
+        <div className="flex items-center justify-center min-h-screen m-auto align-middle">
+          <div className="flex h-screen gap-6 px-6 py-6">
+            <SideBar handleScrollToId={handleScrollToId} />
+            <ScrollComponent ref={scrollRef} />
+          </div>
         </div>
-      </div></>
+      </ThemeProvider></>
   );
 
 };

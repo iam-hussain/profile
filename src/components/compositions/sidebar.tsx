@@ -6,7 +6,6 @@ import {
     BriefcaseBusiness,
     GitPullRequest,
     Handshake,
-    Sun,
     SendHorizontal,
     Github,
     Linkedin,
@@ -14,6 +13,7 @@ import {
 } from 'lucide-react';
 import { CustomAnchor } from "../ui/anchor";
 import { links } from "@/configs";
+import { ThemeModeToggle } from "../patterns/theme-mode-toggle";
 
 const SideBar = ({ handleScrollToId }: {
     handleScrollToId: (id: string) => void
@@ -23,7 +23,7 @@ const SideBar = ({ handleScrollToId }: {
             <div className="flex flex-col-reverse items-center justify-center h-auto gap-5 lg:flex-row ">
                 <div className="flex h-full gap-4 lg:flex-col">
                     <div className="flex flex-col gap-4 p-3 rounded-full bg-background">
-                        <Button variant={'icon'}><Sun /></Button>
+                        <ThemeModeToggle />
                     </div>
                     <div className="flex gap-3 p-3 rounded-full bg-background lg:py-5 lg:flex-col">
                         <Button variant={'icon'} onClick={() => handleScrollToId('about')}><UserPen /></Button>

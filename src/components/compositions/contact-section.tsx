@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Send } from "lucide-react"
 
 export default function ContactSection() {
     return (
-        <div className="flex flex-col gap-12 px-6 pb-20" id="contact">
+        <div className="flex flex-col gap-12 px-6 py-12 pb-20" id="contact">
             <div className="flex flex-col items-start w-auto gap-4">
                 <div className='flex items-center justify-center w-auto gap-2 px-2 py-1 align-middle border rounded-md'>
                     <Send />
