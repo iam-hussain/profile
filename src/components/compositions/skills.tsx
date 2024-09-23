@@ -14,7 +14,7 @@ const Skills = () => {
                 </div>
                 <h2 className="text-2xl font-bold 4xl:text-3xl">Technology Stack</h2>
             </div>
-            <div className="flex w-full max-w-4xl">
+            <div className="flex w-full max-w-3xl">
                 <SkillsWordCloud />
             </div>
 
