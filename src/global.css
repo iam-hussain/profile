@@ -114,13 +114,13 @@ button>svg {
   width: 22px;
 }
 
-text {
+path {
   cursor: pointer;
   user-select: none;
 }
 
-text:hover,
-text:active {
+path:hover,
+path:active {
   rotate: none;
   fill: hsl(var(--primary));
   transition: all ease-in-out 200ms;
