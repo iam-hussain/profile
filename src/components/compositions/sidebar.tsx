@@ -37,7 +37,7 @@ const SideBar = ({ handleScrollToId }: {
                     <Separator className="2xl:hidden bg-foreground/20" />
 
                 </div>
-                <div className="w-[300px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none 4xl:p-10 2xl:p-6 flex flex-col justify-between align-middle items-center gap-6">
+                <div className="2xl:w-[300px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none 4xl:p-10 2xl:p-6 flex flex-col justify-between align-middle items-center gap-6">
                     <img src='/avatar.webp' alt="avatar" className="border-2 rounded-tr-none border-foreground rounded-3xl" />
                     <div className="flex flex-col items-center justify-start gap-2 align-middle">
                         <p className="4xl:text-xl test-lg font-semibold text-primary">Software Engineer</p>
