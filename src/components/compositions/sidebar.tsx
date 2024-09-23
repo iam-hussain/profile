@@ -20,7 +20,7 @@ const SideBar = ({ handleScrollToId }: {
 
 
     return (
-        <div className="flex items-start justify-center align-middle px-6 2xl:px-0">
+        <div className="flex items-start justify-center px-6 align-middle 2xl:px-0">
             <div className="flex flex-col-reverse items-center justify-center h-auto gap-5 2xl:flex-row ">
                 <div className="flex flex-wrap h-full gap-3 2xl:gap-4 2xl:flex-col">
                     <div className="absolute flex flex-col gap-4 p-2 rounded-full 2xl:relative left-4 top-4 2xl:top-0 2xl:left-0 bg-background">
@@ -37,11 +37,11 @@ const SideBar = ({ handleScrollToId }: {
                     <Separator className="2xl:hidden bg-foreground/20" />
 
                 </div>
-                <div className="2xl:w-[300px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none 4xl:p-10 2xl:p-6 flex flex-col justify-between align-middle items-center gap-6">
+                <div className="2xl:w-[300px] 4xl:w-[330px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none 4xl:p-10 2xl:p-6 flex flex-col justify-between align-middle items-center gap-6">
                     <img src='/avatar.webp' alt="avatar" className="border-2 rounded-tr-none border-foreground rounded-3xl" />
                     <div className="flex flex-col items-center justify-start gap-2 align-middle">
-                        <p className="4xl:text-xl test-lg font-semibold text-primary">Software Engineer</p>
-                        <h1 className="4xl:text-4xl text-3xl text-foreground">Jakir <span className="font-extrabold">Hussain</span></h1>
+                        <p className="font-semibold 4xl:text-xl test-lg text-primary">Software Engineer</p>
+                        <h1 className="text-3xl 4xl:text-4xl text-foreground">Jakir <span className="font-extrabold">Hussain</span></h1>
                     </div>
                     <div className="flex items-stretch justify-between gap-2">
                         <CustomAnchor
