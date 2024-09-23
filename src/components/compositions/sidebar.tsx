@@ -20,13 +20,13 @@ const SideBar = ({ handleScrollToId }: {
 
 
     return (
-        <div className="flex items-start justify-center align-middle">
+        <div className="flex items-start justify-center align-middle px-6 2xl:px-0">
             <div className="flex flex-col-reverse items-center justify-center h-auto gap-5 2xl:flex-row ">
                 <div className="flex flex-wrap h-full gap-3 2xl:gap-4 2xl:flex-col">
-                    <div className="absolute flex flex-col gap-4 p-3 rounded-full 2xl:relative left-4 top-4 2xl:top-0 2xl:left-0 bg-background">
+                    <div className="absolute flex flex-col gap-4 p-2 rounded-full 2xl:relative left-4 top-4 2xl:top-0 2xl:left-0 bg-background">
                         <ThemeModeToggle />
                     </div>
-                    <div className="flex gap-3 p-3 rounded-full bg-background 2xl:flex-col">
+                    <div className="flex gap-3 p-2 rounded-full bg-background 2xl:flex-col">
                         <Button variant={'icon'} onClick={() => handleScrollToId('about')}><UserPen /></Button>
                         <Button variant={'icon'} onClick={() => handleScrollToId('service')}><Handshake /></Button>
                         <Button variant={'icon'} onClick={() => handleScrollToId('skill')}><GitPullRequest /></Button>
@@ -37,11 +37,11 @@ const SideBar = ({ handleScrollToId }: {
                     <Separator className="2xl:hidden bg-foreground/20" />
 
                 </div>
-                <div className="2xl:w-[360px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none p-10 flex flex-col justify-between align-middle items-center gap-6">
+                <div className="w-[300px] w-full max-w-[360px] bg-background rounded-3xl rounded-tr-none 4xl:p-10 2xl:p-6 flex flex-col justify-between align-middle items-center gap-6">
                     <img src='/avatar.webp' alt="avatar" className="border-2 rounded-tr-none border-foreground rounded-3xl" />
                     <div className="flex flex-col items-center justify-start gap-2 align-middle">
-                        <p className="text-xl font-semibold text-primary">Software Engineer</p>
-                        <h1 className="text-4xl text-foreground">Jakir <span className="font-extrabold">Hussain</span></h1>
+                        <p className="4xl:text-xl test-lg font-semibold text-primary">Software Engineer</p>
+                        <h1 className="4xl:text-4xl text-3xl text-foreground">Jakir <span className="font-extrabold">Hussain</span></h1>
                     </div>
                     <div className="flex items-stretch justify-between gap-2">
                         <CustomAnchor
@@ -75,7 +75,7 @@ const SideBar = ({ handleScrollToId }: {
                     <div className="flex flex-col w-full gap-4">
                         <Separator />
 
-                        <div className="flex justify-between w-full gap-2">
+                        <div className="grid grid-cols-2 gap-2">
                             <CustomAnchor
                                 variant={'outline'}
                                 href={links.cv}
@@ -85,9 +85,7 @@ const SideBar = ({ handleScrollToId }: {
                                 Download CV
                             </CustomAnchor>
 
-
-                            <Separator orientation="vertical" />
-                            <Button variant={'outline'} className="w-full" onClick={() => handleScrollToId('contact')}>Contact me</Button>
+                            <Button variant={'outline'} className="w-auto" onClick={() => handleScrollToId('contact')}>Contact me</Button>
                         </div>
                     </div>
 

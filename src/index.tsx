@@ -17,8 +17,8 @@ import { Mouse } from 'lucide-react';
 
 const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
-    <ScrollArea className="flex-1 max-w-6xl rounded-tr-3xl rounded-b-3xl" ref={ref}>
-      <div className="flex flex-col w-full max-w-6xl gap-4 rounded-tl-none lg:gap-12 xl:p-8 md:p-6 2xl:p-12 bg-background rounded-3xl" id="base-scroll">
+    <ScrollArea className="flex-1" ref={ref}>
+        <div className='px-4 flex flex-col justify-center align-middle items-center'>
         <AboutMe />
         <Separator />
         <Service />
@@ -28,7 +28,7 @@ const ScrollComponent = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         <Experience />
         <Separator />
         <Contact />
-      </div>
+        </div>
     </ScrollArea>
   );
 });
@@ -66,12 +66,14 @@ const App = () => {
         disableTransitionOnChange>
         {/* <ParticlesBG /> */}
         <div className="flex items-center justify-center min-h-screen m-auto align-middle select-none">
-          <div className="flex flex-col gap-6 py-6 2xl:h-screen 2xl:p-6 2xl:flex-row">
+          <div className="flex flex-col gap-6 py-12 md:px-6 md:pt-24 2xl:h-screen 2xl:p-8 2xl:flex-row">
             <SideBar handleScrollToId={handleScrollToId} />
-            <ScrollComponent ref={scrollRef} />
+            <div className="flex max-w-6xl gap-4 rounded-tl-none 2xl:gap-8 4xl:gap-12 2xl:p-4 p-2 py-8 bg-background rounded-3xl" id="base-scroll">
+              <ScrollComponent ref={scrollRef} />
+            </div>
           </div>
         </div>
-        <div className="fixed flex flex-col w-auto gap-4 p-3 rounded-full right-4 bottom-4 bg-background">
+        <div className="fixed flex flex-col w-auto gap-4 p-2 rounded-full right-4 bottom-4 bg-background">
           <Button variant={'icon'} onClick={() => handleScrollTop()} className=' 2xl:hidden'>
             <Mouse />
           </Button>

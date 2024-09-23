@@ -57,13 +57,13 @@ const Service = () => {
 
 
     return (
-        <div className="flex flex-col gap-12 px-6 py-12" id="service">
-            <div className="flex flex-col items-start w-auto gap-4">
+        <div className="flex flex-col 4xl:gap-12 gap-8 2xl:px-6 py-8 4xl:py-12 w-full justify-center align-middle items-center" id="service">
+            <div className="flex flex-col items-start w-full gap-4">
                 <div className='flex items-center justify-center w-auto gap-2 px-2 py-1 align-middle border rounded-md'>
                     <Cog />
                     <span className="text-sm font-medium uppercase text-foreground/60">Service</span>
                 </div>
-                <h2 className="text-3xl font-bold">What Services I Provide?</h2>
+                <h2 className="4xl:text-3xl text-2xl font-bold">What Services I Provide?</h2>
             </div>
             <div className="grid grid-cols-1 gap-4 2xl:grid-cols-3 md:grid-cols-2">
                 {services.map((service, index) => (
